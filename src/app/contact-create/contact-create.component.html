@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col s12">
+    <h1>Crear un contacto</h1>
+  </div>
+</div>
+
+<div class="row">
+  <form class="col s12" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">perm_identity</i>
+          <input formControlName="id" id="contactId" type="text" class="validate">
+          <label for="contactId">Contacto ID</label>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input formControlName="nombre" id="nombre" type="text" class="validate">
+          <label for="nombre">Nombre</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">local_phone</i>
+          <input formControlName="telefono" id="telefono" type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="12" class="validate">
+          <span class="helper-text" data-error="El telefono es invalido" data-success="agregado"></span>
+          <label for="telefono">Telefono (Formato: 000-000-0000)</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">email</i>
+          <input formControlName="correo" id="correo" type="email" class="validate">
+          <span class="helper-text" data-error="El correo es invalido" data-success="agregado"></span>
+          <label for="correo">Correo</label>
+        </div>
+      </div>
+
+
+      <!--Botón-->
+      <div class="row center">
+        <div class="col s12">
+          <button class="waves-effect waves-light btn-large">Crear contacto</button>
+        </div>
+      </div>
+
+    </form>
+</div>
