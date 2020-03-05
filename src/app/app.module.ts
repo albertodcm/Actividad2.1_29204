@@ -6,8 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
-import { ContactDetailComponent } from './contact-detail/contact-detail.component';
-import { ContactManagmentComponent } from './contact-managment/contact-managment.component';
+
 import { ContactCreateComponent } from './contact-create/contact-create.component';
 import { ContactUpdateComponent } from './contact-update/contact-update.component';
 
@@ -16,8 +15,7 @@ import { ContactUpdateComponent } from './contact-update/contact-update.componen
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    ContactDetailComponent,
-    ContactManagmentComponent,
+
     ContactCreateComponent,
     ContactUpdateComponent
   ],

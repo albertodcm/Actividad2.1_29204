@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { ContactService } from '../Services/contact.service';
 import { Contact } from 'src/models/contact.model';
 
+declare let $: any;
+
 @Component({
   selector: 'app-contact-create',
   templateUrl: './contact-create.component.html',
@@ -34,6 +36,10 @@ export class ContactCreateComponent implements OnInit {
       const newContact: Contact = {
         ...this.contactForm.value
       };
+      if ($('[id=someId]').length > 1) {
+        // Do Something
+    }
+
       this.contactSerice.addContact(newContact).then((result) => {
         this.router.navigate(['']);
       });
